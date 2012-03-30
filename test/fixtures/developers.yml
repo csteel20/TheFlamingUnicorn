@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  api_key: MyText
+  threshold: 1
+  push_url: MyString
+
+two:
+  name: MyString
+  api_key: MyText
+  threshold: 1
+  push_url: MyString

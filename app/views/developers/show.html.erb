@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @developer.name %>
+</p>
+
+<p>
+  <b>Api key:</b>
+  <%= @developer.api_key %>
+</p>
+
+<p>
+  <b>Threshold:</b>
+  <%= @developer.threshold %>
+</p>
+
+<p>
+  <b>Push url:</b>
+  <%= @developer.push_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_developer_path(@developer) %> |
+<%= link_to 'Back', developers_path %>

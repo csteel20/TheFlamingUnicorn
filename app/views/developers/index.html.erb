@@ -1,0 +1,29 @@
+<h1>Listing developers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Api key</th>
+    <th>Threshold</th>
+    <th>Push url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @developers.each do |developer| %>
+  <tr>
+    <td><%= developer.name %></td>
+    <td><%= developer.api_key %></td>
+    <td><%= developer.threshold %></td>
+    <td><%= developer.push_url %></td>
+    <td><%= link_to 'Show', developer %></td>
+    <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
+    <td><%= link_to 'Destroy', developer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Developer', new_developer_path %>

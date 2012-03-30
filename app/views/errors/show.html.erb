@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @error.name %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @error.content %>
+</p>
+
+<p>
+  <b>Site:</b>
+  <%= @error.site_id %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @error.priority %>
+</p>
+
+
+<%= link_to 'Edit', edit_error_path(@error) %> |
+<%= link_to 'Back', errors_path %>

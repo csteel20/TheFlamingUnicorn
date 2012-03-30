@@ -1,0 +1,33 @@
+<%= form_for(@developer) do |f| %>
+  <% if @developer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@developer.errors.count, "error") %> prohibited this developer from being saved:</h2>
+
+      <ul>
+      <% @developer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :api_key %><br />
+    <%= f.text_area :api_key %>
+  </div>
+  <div class="field">
+    <%= f.label :threshold %><br />
+    <%= f.number_field :threshold %>
+  </div>
+  <div class="field">
+    <%= f.label :push_url %><br />
+    <%= f.text_field :push_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
