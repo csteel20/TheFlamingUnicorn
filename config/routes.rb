@@ -1,4 +1,6 @@
 FlamingUnicorn::Application.routes.draw do
+  post "request/index"
+
   resources :developers
 
   ActiveAdmin.routes(self)
