@@ -25,7 +25,7 @@ class SitesController < ApplicationController
   # GET /sites/new.json
   def new
     @site = Site.new
-
+  
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @site }
@@ -41,10 +41,11 @@ class SitesController < ApplicationController
   # POST /sites.json
   def create
     @site = Site.new(params[:site])
+    @site.api_key = "HELLO?!"
 
     respond_to do |format|
       if @site.save
-        format.html { redirect_to @site, notice: 'Site was successfully created.' }
+        format.html { redirect_to @site, notice: 'Site was successfully created!' }
         format.json { render json: @site, status: :created, location: @site }
       else
         format.html { render action: "new" }
