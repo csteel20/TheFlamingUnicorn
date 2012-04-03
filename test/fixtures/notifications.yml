@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  developer_id: 
+  type: 
+  api_key: MyString
+  push_url: MyString
+
+two:
+  developer_id: 
+  type: 
+  api_key: MyString
+  push_url: MyString

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120402185715) do
+ActiveRecord::Schema.define(:version => 20120403144213) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(:version => 20120402185715) do
     t.string   "name"
     t.text     "api_key"
     t.integer  "threshold"
-    t.string   "push_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -64,11 +63,19 @@ ActiveRecord::Schema.define(:version => 20120402185715) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "notifications", :force => true do |t|
+    t.integer  "developer_id"
+    t.string   "type"
+    t.string   "api_key"
+    t.string   "push_url"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "sites", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "api_key"
   end
 
 end

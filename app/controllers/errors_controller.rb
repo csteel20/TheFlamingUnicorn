@@ -41,16 +41,7 @@ class ErrorsController < ApplicationController
   # POST /errors.json
   def create
     @error = Error.new(params[:error])
-
-    respond_to do |format|
-      if @error.save
-        format.html { redirect_to @error, notice: 'Error was successfully created.' }
-        format.json { render json: @error, status: :created, location: @error }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @error.errors, status: :unprocessable_entity }
-      end
-    end
+    render :json => { "result" => @error.save, "errors" => @error.errors }
   end
 
   # PUT /errors/1

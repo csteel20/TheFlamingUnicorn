@@ -1,5 +1,6 @@
 FlamingUnicorn::Application.routes.draw do
-  post "request/index"
+
+  post "/request", :to => "errors#create"
 
   resources :developers
 

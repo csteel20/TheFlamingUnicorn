@@ -41,7 +41,6 @@ class SitesController < ApplicationController
   # POST /sites.json
   def create
     @site = Site.new(params[:site])
-    @site.api_key = "HELLO?!"
 
     respond_to do |format|
       if @site.save
