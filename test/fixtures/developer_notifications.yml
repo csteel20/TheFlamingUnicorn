@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  notifcation_id: 1
+  developer_id: 1
+
+two:
+  notifcation_id: 1
+  developer_id: 1
