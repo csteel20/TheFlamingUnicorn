@@ -18,10 +18,14 @@ class Error < ActiveRecord::Base
     self.priority ||= 0
   end
   
-  #example test for myself
+  #send notification to each user, for each site, for each notification they subscribe to
   def make_request
-    @notification = Notification.new
-    @notification.make_new_call self
+    @request = self
+    @request.site.developers.each do |d|
+      d.notifications.each do |n|
+        n.make_new_call @request
+      end
+    end
   end
 
 end
