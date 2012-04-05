@@ -20,8 +20,8 @@ class Error < ActiveRecord::Base
   
   #example test for myself
   def make_request
-    #@notification = Notification.new
-    #@notification.make_new_call self
+    @notification = Notification.new
+    @notification.make_new_call self
   end
 
 end

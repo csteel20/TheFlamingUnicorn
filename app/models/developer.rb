@@ -1,4 +1,4 @@
 class Developer < ActiveRecord::Base
-  #might be an issue
-  has_many :notifications
+  has_many :developer_notifications
+  has_many :notifications, :through => :developer_notifications
 end
