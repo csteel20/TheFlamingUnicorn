@@ -1,8 +1,6 @@
 class Error < ActiveRecord::Base
   
   belongs_to :site
-  
-  require 'rest-client'
 
   #set validation
   validates :site_id, :presence => { :message => "Site is required." }
